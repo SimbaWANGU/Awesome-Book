@@ -1,6 +1,8 @@
 # Awesome Books
 > A Microverse pair programming project on book library.
 
+<img src="./img/shot1.png" align='center'>
+</img>
 
 ## Built With
 
