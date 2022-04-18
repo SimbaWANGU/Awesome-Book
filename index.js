@@ -8,21 +8,30 @@ let bookArray = JSON.parse(localStorage.getItem("book")) || []
 function book(titleInput , authorInput) {
   this.title = titleInput.value;
   this.author = authorInput.value
+  this.id = bookArray.length
+}
+
+function removeBook(selectedId){
+
+  bookArray.splice(selectedId, 1);
+  showBook( bookArray )
+  localStorage.setItem ("book", JSON.stringify (bookArray))
+
 }
 
 function showBook( bookArray){
 
   addSection.innerHTML = ""
-  bookArray.forEach(book => {
-    console.log(book)
+  bookArray.forEach((book, id) => {
     addSection.innerHTML += ` 
     <div>
     <span>${book.title}</span>
     <span> by </span>
     <span>${book.author}</span>
-    <button type="button ">Remove </button>
+    <button onclick="removeBook(this.id)" type="button" id="${id}">Remove </button>
     <hr>
   </div>
+  
   `
   });
 }
