@@ -1,27 +1,17 @@
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
-const addSection  = document.querySelector('#book-section');
+const addSection = document.querySelector('#book-section');
 const addBtn = document.getElementById('add-btn');
-let bookArray = JSON.parse(localStorage.getItem("book")) || []
+const bookArray = JSON.parse(localStorage.getItem('book')) || [];
 
-
-function book(titleInput , authorInput) {
+function Book(titleInput, authorInput) {
   this.title = titleInput.value;
-  this.author = authorInput.value
-  this.id = bookArray.length
+  this.author = authorInput.value;
+  this.id = bookArray.length;
 }
 
-function removeBook(selectedId){
-
-  bookArray.splice(selectedId, 1);
-  showBook( bookArray )
-  localStorage.setItem ("book", JSON.stringify (bookArray))
-
-}
-
-function showBook( bookArray){
-
-  addSection.innerHTML = ""
+function showBook(bookArray) {
+  addSection.innerHTML = '';
   bookArray.forEach((book, id) => {
     addSection.innerHTML += ` 
     <div>
@@ -32,24 +22,27 @@ function showBook( bookArray){
     <hr>
   </div>
   
-  `
+  `;
   });
 }
 
-
-
 addBtn.addEventListener('click', () => {
- if(titleInput.value != "" && authorInput.value != "")
-{
-  let item = new book ( titleInput , authorInput )
-  bookArray.push(item)
+  if (titleInput.value !== '' && authorInput.value !== '') {
+    const item = new Book(titleInput, authorInput);
+    bookArray.push(item);
 
-  localStorage.setItem ("book", JSON.stringify (bookArray))
-  showBook( bookArray )
-  titleInput.value = ""
-  authorInput.value =""
+    localStorage.setItem('book', JSON.stringify(bookArray));
+    showBook(bookArray);
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+});
 
+function removeBook(selectedId) { /* eslint-disable-line */
+
+  bookArray.splice(selectedId, 1);
+  showBook(bookArray);
+  localStorage.setItem('book', JSON.stringify(bookArray));
 }
-})
 
-showBook( bookArray )
+showBook(bookArray);
