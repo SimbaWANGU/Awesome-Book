@@ -10,18 +10,39 @@
 </head>
 
 <body>
+  <section class="intro display-flex">
+    <h1>Awesome Books</h1>
+    <nav class="display-flex">
+      <a id="list"> List</a>
+      <a id="add-it"> Add</a>
+      <a id="contact-us"> Contact</a>
+    </nav>
+  </section>
+  <div id="calendar">123</div>
 
-  <h1>Awesome Books</h1>
-  <section id="book-section"></section>
+  <section id="book-section" class="display-none"></section>
 
-  <section class="add">
-    <input type="text" id="title" placeholder="title"><br><br>
-    <input type="text" id="author" placeholder="author"><br><br>
+  <section class="add" id="added-book">
+    <h2>Add a book</h2>
+    <input type="text" id="title" placeholder="  title"><br><br>
+    <input type="text" id="author" placeholder="  author"><br><br>
     <button type="button" id="add-btn">Add</button>
 
   </section>
 
+  <section id="contact" class="display-none">
+    <h2>Contact Information</h2>
+    <p>Do you have any questions, or you just want to say hi? </p>
+      you can reach out to us!
+    <ul>
+      <li>our email : mail@gmail.com</li>
+      <li>our phone : 123456789</li>
+      <li>our adress: California, 2nd street</li>
+    </ul>
+  </section>
+  <footer> © All copyrights are reserved </footer>
   <script src="index.js"></script>
+  <script src="events.js"></script>
 </body>
 
 </html>
