@@ -14,10 +14,6 @@
   width: 100%;
 }
 
-.display-none {
-  display: none;
-}
-
 body {
   height: 130vh;
   margin: auto;
@@ -47,7 +43,7 @@ body {
   padding: 1rem 4rem;
 }
 
-#book-section {
+.book-added-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,4 +108,9 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+
+.display-none {
+  display: none;
 }
