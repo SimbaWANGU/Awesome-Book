@@ -7,6 +7,9 @@
 <img src="./img/shot2.JPG" align='center'>
 </img>
 
+<img src="./img/shot3.JPG" align='center'>
+</img>
+
 ## Built With
 
 - HTML5
