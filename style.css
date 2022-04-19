@@ -5,3 +5,111 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.display-flex {
+  display: flex;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.display-none {
+  display: none;
+}
+
+body {
+  height: 130vh;
+  margin: auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.intro {
+  border: 2px solid #000;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-items: center;
+}
+
+.intro nav a {
+  padding-right: 1rem;
+  justify-content: space-around;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#calendar {
+  text-align: right;
+  padding: 1rem 4rem;
+}
+
+#book-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.container-book {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.container-book:nth-child(even) {
+  background-color: gray;
+  color: #fff;
+}
+
+.books-title {
+  display: flex;
+}
+
+.books-title p {
+  margin-right: 1rem;
+}
+
+.add {
+  margin: 2rem 0;
+}
+
+.add input {
+  width: 30%;
+  padding: 10px;
+  outline: none;
+}
+
+.add h2 {
+  margin: 1rem 0;
+}
+
+.add button {
+  width: 10%;
+  padding: 13px;
+}
+
+#contact {
+  margin: 3rem 0;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#contact li {
+  text-align: center;
+}
+
+footer {
+  background-color: gray;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -4,6 +4,9 @@
 <img src="./img/shot1.png" align='center'>
 </img>
 
+<img src="./img/shot2.JPG" align='center'>
+</img>
+
 ## Built With
 
 - HTML5
