@@ -4,10 +4,12 @@ const addSection = document.querySelector('#book-section');
 const addBtn = document.getElementById('add-btn');
 const bookArray = JSON.parse(localStorage.getItem('book')) || [];
 
-function Book(titleInput, authorInput) {
-  this.title = titleInput.value;
-  this.author = authorInput.value;
-  this.id = bookArray.length;
+class Book {
+  constructor (titleInput, authorInput) {
+    this.title = titleInput.value;
+    this.author = authorInput.value;
+    this.id = bookArray.length;
+  }
 }
 
 function showBook(bookArray) {
